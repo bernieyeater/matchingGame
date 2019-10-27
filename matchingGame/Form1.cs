@@ -12,6 +12,10 @@ namespace matchingGame
 {
     public partial class Form1 : Form
     {
+        Random random;
+        List<String> icons = new List<string>()
+        { "a", "a", "b", "b","c","c","d","d",
+            "e","e","f","f","g","g","h","h"};
         public Form1()
         {
             InitializeComponent();
