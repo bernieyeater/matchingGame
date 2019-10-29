@@ -20,5 +20,23 @@ namespace matchingGame
         {
             InitializeComponent();
         }
+
+        private void assignIcons()
+        {
+            foreach (Control control in tableLayoutPanel.Controls)
+            {
+                Label iconLabel = control as Label;
+                    if(iconLabel != null)
+                {
+                    int randomNumber = random.Next(icons.Count);
+                    iconLabel.Text = icons[randomNumber];
+                }
+            }
+        }
+
+        private void lbl00_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
