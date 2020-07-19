@@ -251,7 +251,7 @@
             this.lbl02.TabIndex = 2;
             this.lbl02.Text = "c";
             this.lbl02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl02.Click += new System.EventHandler(this.lbl02_Click);
+ //           this.lbl02.Click += new System.EventHandler(this.lbl02_Click);
             // 
             // lbl01
             // 
@@ -276,7 +276,7 @@
             this.lbl00.TabIndex = 0;
             this.lbl00.Text = "c";
             this.lbl00.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl00.Click += new System.EventHandler(this.lbl00_Click);
+//            this.lbl00.Click += new System.EventHandler(this.lbl00_Click);
             // 
             // Form1
             // 

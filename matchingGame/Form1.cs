@@ -31,7 +31,7 @@ namespace matchingGame
                 Label iconLabel = control as Label;
                     if(iconLabel != null)
                 {
-                    int randomNumber = random.Next(0, 15);
+                    int randomNumber = random.Next(0, icons.Count);
                     iconLabel.Text = icons[randomNumber];
                 }
             }
@@ -39,14 +39,5 @@ namespace matchingGame
 
 
 
-        private void lbl00_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl02_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
