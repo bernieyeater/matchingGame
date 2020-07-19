@@ -12,13 +12,16 @@ namespace matchingGame
 {
     public partial class Form1 : Form
     {
-        Random random;
+        private readonly Random random = new Random();
         List<String> icons = new List<string>()
-        { "a", "a", "b", "b","c","c","d","d",
-            "e","e","f","f","g","g","h","h"};
+
+        { "!", "!", "N", "N",",",",","k","k",
+            "b","b","v","v","w","w","z","z"};
+
         public Form1()
         {
             InitializeComponent();
+            assignIcons();
         }
 
         private void assignIcons()
@@ -28,13 +31,20 @@ namespace matchingGame
                 Label iconLabel = control as Label;
                     if(iconLabel != null)
                 {
-                    int randomNumber = random.Next(icons.Count);
+                    int randomNumber = random.Next(0, 15);
                     iconLabel.Text = icons[randomNumber];
                 }
             }
         }
 
+
+
         private void lbl00_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl02_Click(object sender, EventArgs e)
         {
 
         }
