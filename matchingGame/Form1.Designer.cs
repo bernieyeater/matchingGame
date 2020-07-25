@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.lbl15 = new System.Windows.Forms.Label();
             this.lbl14 = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             this.lbl02 = new System.Windows.Forms.Label();
             this.lbl01 = new System.Windows.Forms.Label();
             this.lbl00 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +97,7 @@
             this.lbl15.TabIndex = 15;
             this.lbl15.Text = "c";
             this.lbl15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl15.Click += new System.EventHandler(this.label_click);
             // 
             // lbl14
             // 
@@ -107,6 +110,7 @@
             this.lbl14.TabIndex = 14;
             this.lbl14.Text = "c";
             this.lbl14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl14.Click += new System.EventHandler(this.label_click);
             // 
             // lbl13
             // 
@@ -119,6 +123,7 @@
             this.lbl13.TabIndex = 13;
             this.lbl13.Text = "c";
             this.lbl13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl13.Click += new System.EventHandler(this.label_click);
             // 
             // lbl12
             // 
@@ -131,6 +136,7 @@
             this.lbl12.TabIndex = 12;
             this.lbl12.Text = "c";
             this.lbl12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl12.Click += new System.EventHandler(this.label_click);
             // 
             // lbl11
             // 
@@ -143,6 +149,7 @@
             this.lbl11.TabIndex = 11;
             this.lbl11.Text = "c";
             this.lbl11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl11.Click += new System.EventHandler(this.label_click);
             // 
             // lbl10
             // 
@@ -155,6 +162,7 @@
             this.lbl10.TabIndex = 10;
             this.lbl10.Text = "c";
             this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl10.Click += new System.EventHandler(this.label_click);
             // 
             // lbl09
             // 
@@ -167,6 +175,7 @@
             this.lbl09.TabIndex = 9;
             this.lbl09.Text = "c";
             this.lbl09.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl09.Click += new System.EventHandler(this.label_click);
             // 
             // lbl08
             // 
@@ -179,6 +188,7 @@
             this.lbl08.TabIndex = 8;
             this.lbl08.Text = "c";
             this.lbl08.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl08.Click += new System.EventHandler(this.label_click);
             // 
             // lbl07
             // 
@@ -191,6 +201,7 @@
             this.lbl07.TabIndex = 7;
             this.lbl07.Text = "c";
             this.lbl07.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl07.Click += new System.EventHandler(this.label_click);
             // 
             // lbl06
             // 
@@ -203,6 +214,7 @@
             this.lbl06.TabIndex = 6;
             this.lbl06.Text = "c";
             this.lbl06.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl06.Click += new System.EventHandler(this.label_click);
             // 
             // lbl05
             // 
@@ -215,6 +227,7 @@
             this.lbl05.TabIndex = 5;
             this.lbl05.Text = "c";
             this.lbl05.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl05.Click += new System.EventHandler(this.label_click);
             // 
             // lbl04
             // 
@@ -227,6 +240,7 @@
             this.lbl04.TabIndex = 4;
             this.lbl04.Text = "c";
             this.lbl04.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl04.Click += new System.EventHandler(this.label_click);
             // 
             // lbl03
             // 
@@ -239,6 +253,7 @@
             this.lbl03.TabIndex = 3;
             this.lbl03.Text = "c";
             this.lbl03.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl03.Click += new System.EventHandler(this.label_click);
             // 
             // lbl02
             // 
@@ -251,7 +266,7 @@
             this.lbl02.TabIndex = 2;
             this.lbl02.Text = "c";
             this.lbl02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
- //           this.lbl02.Click += new System.EventHandler(this.lbl02_Click);
+            this.lbl02.Click += new System.EventHandler(this.label_click);
             // 
             // lbl01
             // 
@@ -264,6 +279,7 @@
             this.lbl01.TabIndex = 1;
             this.lbl01.Text = "c";
             this.lbl01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl01.Click += new System.EventHandler(this.label_click);
             // 
             // lbl00
             // 
@@ -276,7 +292,12 @@
             this.lbl00.TabIndex = 0;
             this.lbl00.Text = "c";
             this.lbl00.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-//            this.lbl00.Click += new System.EventHandler(this.lbl00_Click);
+            this.lbl00.Click += new System.EventHandler(this.label_click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 750;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -311,6 +332,7 @@
         private System.Windows.Forms.Label lbl03;
         private System.Windows.Forms.Label lbl02;
         private System.Windows.Forms.Label lbl01;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
