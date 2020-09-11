@@ -14,7 +14,8 @@ namespace matchingGame
     {
         Label firstClicked = null;
         Label secondClicked = null;
-        private readonly Random random = new Random();
+        Random random = new Random();
+        //private readonly Random random = new Random();
         List<String> icons = new List<string>()
 
         { "!", "!", "N", "N",",",",","k","k",
@@ -43,18 +44,32 @@ namespace matchingGame
 
         private void label_click(object sender, EventArgs e)
         {
+            if (timer1.Enabled == true)
+                return;
+
             Label clickedLabel = sender as Label;
             if (clickedLabel != null)
             {
                 if (clickedLabel.ForeColor == Color.Black)
                     return;
-                clickedLabel.ForeColor = Color.Black;
-                //if (firstClicked == null)
-                //{
-                //    firstClicked = clickedLabel;
-                //    firstClicked.ForeColor = Color.Black;
-                 //   return;
-               // }
+                //clickedLabel.ForeColor = Color.Black;
+                if (firstClicked == null)
+                {
+                    firstClicked = clickedLabel;
+                    firstClicked.ForeColor = Color.Black;
+                    return;
+                }
+                secondClicked = clickedLabel;
+                secondClicked.ForeColor = Color.Black;
+
+                if (firstClicked.Text == secondClicked.Text)
+                {
+                    firstClicked = null;
+                    secondClicked = null;
+                    return;
+                }
+
+                timer1.Start();
             }
         }
 
@@ -65,6 +80,21 @@ namespace matchingGame
             secondClicked.ForeColor = secondClicked.BackColor;
             firstClicked = null;
             secondClicked = null;
+        }
+        private void CheckForWinner()
+        {
+            foreach (Control control in tableLayoutPanel.Controls)
+            {
+                Label iconLabel = control as Label;
+
+                if (iconLabel.ForeColor != null)
+                {
+                    if (iconLabel.ForeColor == iconLabel.BackColor)
+                        return;
+                }
+                MessageBox.Show("You matched all the icons!", "Congratulations and well done! ");
+                Close();
+            }
         }
     }
 }
